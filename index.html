@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Design Goals Interiors — premium residential and commercial interiors in Bengaluru. Where creativity meets comfort.">
+<title>Design Goals Interiors | Bengaluru</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1d1713;--brown:#4b2d1c;--gold:#c99b5b;--cream:#f7f0e7;--paper:#fffaf4;--muted:#75685d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font-family:"DM Sans",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.container{width:min(1160px,92%);margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(29,23,19,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,155,91,.2)}
+.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px}.brand img{width:220px;height:auto}.links{display:flex;gap:28px;color:#f8efe4;font-size:14px}.links a:hover{color:var(--gold)}
+.hero{min-height:94vh;padding:145px 0 70px;background:radial-gradient(circle at 85% 15%,rgba(201,155,91,.18),transparent 30%),linear-gradient(115deg,#211814,#392318 48%,#17110e);color:#fffaf4;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(201,155,91,.22);border-radius:50%;right:-130px;bottom:-160px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+.eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:12px;font-weight:600}.hero h1{font-family:"Cormorant Garamond",serif;font-size:clamp(60px,8vw,105px);line-height:.88;margin:18px 0 22px;font-weight:600}.hero h1 span{color:var(--gold);display:block}.hero p{font-size:18px;color:#e9ddd0;max-width:570px}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 22px;border:1px solid var(--gold);font-weight:600;font-size:14px}.btn.primary{background:var(--gold);color:#211814}.btn.secondary{color:#fffaf4}.hero-photo{height:590px;border-radius:180px 180px 18px 18px;overflow:hidden;border:1px solid rgba(201,155,91,.6);box-shadow:0 25px 70px rgba(0,0,0,.35)}.hero-photo img{width:100%;height:100%;object-fit:cover}
+section{padding:95px 0}.section-head{max-width:700px;margin-bottom:48px}.kicker{font-size:12px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;font-weight:600}.section-head h2{font-family:"Cormorant Garamond",serif;font-size:58px;line-height:1;margin:10px 0 15px}.section-head p{color:var(--muted)}
+.about{background:var(--cream)}.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}.about-img{height:540px;overflow:hidden;border-radius:12px}.about-img img{width:100%;height:100%;object-fit:cover}.about h3{font-family:"Cormorant Garamond",serif;font-size:38px;margin:0 0 15px}.about p{color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:30px}.stat{border-top:1px solid #d4c2ad;padding-top:15px}.stat strong{font-family:"Cormorant Garamond",serif;font-size:31px;display:block}.stat span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.services{background:#211814;color:#fffaf4}.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.service{min-height:235px;border:1px solid rgba(201,155,91,.35);padding:28px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(145deg,rgba(201,155,91,.08),transparent)}.service .num{color:var(--gold);font-family:"Cormorant Garamond",serif;font-size:28px}.service h3{font-family:"Cormorant Garamond",serif;font-size:30px;margin:10px 0 5px}.service p{font-size:13px;color:#cdbfb3;margin:0}
+.gallery{background:var(--paper)}.gallery-grid{columns:3 280px;column-gap:18px}.gallery-item{break-inside:avoid;margin:0 0 18px;position:relative;overflow:hidden;border-radius:10px;cursor:pointer;background:#eee}.gallery-item img{width:100%;display:block;transition:transform .5s}.gallery-item:hover img{transform:scale(1.035)}.caption{position:absolute;left:14px;bottom:14px;background:rgba(29,23,19,.86);color:#fff;padding:8px 12px;font-size:11px;letter-spacing:1px;text-transform:uppercase}
+.process{background:var(--cream)}.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}.step{border-top:1px solid #cdbca8;padding-top:18px}.step b{color:var(--gold);font-size:13px}.step h3{font-family:"Cormorant Garamond",serif;font-size:27px;margin:7px 0}.step p{font-size:13px;color:var(--muted)}
+.cta{padding:105px 0;background:linear-gradient(130deg,#3a2418,#17110e);color:#fff;text-align:center}.cta h2{font-family:"Cormorant Garamond",serif;font-size:62px;line-height:1;margin:0 auto 16px}.cta p{color:#d8cabe;margin:0 auto 28px}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:850px;margin:45px auto 0;text-align:left}.contact-card{border:1px solid rgba(201,155,91,.35);padding:24px}.contact-card small{color:var(--gold);text-transform:uppercase;letter-spacing:2px}.contact-card a{display:block;margin-top:6px;font-size:18px}
+footer{background:#120d0a;color:#a9998b;padding:25px 0;font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:20px}
+@media(max-width:850px){.links{display:none}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero{padding-top:120px}.hero-photo{height:460px}.service-grid,.process-grid{grid-template-columns:1fr 1fr}.section-head h2,.cta h2{font-size:47px}.about-img{height:430px}}
+@media(max-width:520px){.brand img{width:185px}.service-grid,.process-grid{grid-template-columns:1fr}.hero h1{font-size:68px}.stats{grid-template-columns:1fr}.footer-inner{flex-direction:column}}
+</style>
+</head>
+<body>
+<nav><div class="container nav-inner">
+<a class="brand" href="#home"><img src="logo.svg" alt="Design Goals Interiors"></a>
+<div class="links"><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#process">Process</a><a href="#contact">Contact</a></div>
+</div></nav>
+
+<header class="hero" id="home"><div class="container hero-grid">
+<div>
+<div class="eyebrow">Design Goals Interiors · Bengaluru</div>
+<h1>Spaces with <span>intention.</span></h1>
+<p><strong>Where creativity meets comfort.</strong> Premium interior solutions for homes and commercial spaces, thoughtfully designed around the way you live and work.</p>
+<div class="actions"><a class="btn primary" href="#projects">Explore Our Work</a><a class="btn secondary" href="https://wa.me/918197759714?text=Hi%20Design%20Goals%20Interiors%2C%20I%27d%20like%20to%20discuss%20an%20interior%20project." target="_blank">WhatsApp Us</a></div>
+</div>
+<div class="hero-photo"><img src="images/project-01.jpg" alt="Design Goals Interiors project"></div>
+</div></header>
+
+<section class="about" id="about"><div class="container about-grid">
+<div class="about-img"><img src="images/project-05.jpg" alt="Custom interior detailing"></div>
+<div>
+<div class="kicker">About Design Goals</div><h2 class="section-head" style="margin:10px 0 22px"><span style="font-family:'Cormorant Garamond',serif;font-size:58px;line-height:1">Thoughtful design.<br><em>Beautiful living.</em></span></h2>
+<p>At Design Goals Interiors, we create spaces that balance aesthetics, function and comfort. From refined residential interiors to distinctive commercial environments, every detail is planned to feel personal and timeless.</p>
+<p>Our approach combines custom design, smart space planning and premium finishes to turn everyday spaces into places you love to live and work in.</p>
+<div class="stats"><div class="stat"><strong>01</strong><span>Space Optimized</span></div><div class="stat"><strong>02</strong><span>Custom Designs</span></div><div class="stat"><strong>03</strong><span>Premium Finish</span></div></div>
+</div></div></section>
+
+<section class="services" id="services"><div class="container">
+<div class="section-head"><div class="kicker">What we do</div><h2>Interiors made for your life.</h2><p>From a single feature wall to a complete interior transformation, we bring a premium, cohesive design language to every project.</p></div>
+<div class="service-grid">
+<div class="service"><span class="num">01</span><h3>Residential</h3><p>Warm, functional and elegant homes tailored to your lifestyle.</p></div>
+<div class="service"><span class="num">02</span><h3>Commercial</h3><p>Professional spaces designed to represent your brand and purpose.</p></div>
+<div class="service"><span class="num">03</span><h3>Custom Furniture</h3><p>Purpose-built storage, wardrobes, TV units and feature pieces.</p></div>
+<div class="service"><span class="num">04</span><h3>Space Styling</h3><p>Details, textures and finishes that complete the look.</p></div>
+</div></div></section>
+
+<section class="gallery" id="projects"><div class="container">
+<div class="section-head"><div class="kicker">Selected work</div><h2>Designed. Crafted. Lived in.</h2><p>A glimpse into our residential and commercial interior work.</p></div>
+<div class="gallery-grid">
+<figure class="gallery-item"><img src="images/project-01.jpg" alt="Before and after interior transformation"><figcaption class="caption">Before · After</figcaption></figure>
+<figure class="gallery-item"><img src="images/project-02.jpg" alt="Elegant entry and wash area interior"><figcaption class="caption">Entry & Vanity</figcaption></figure>
+<figure class="gallery-item"><img src="images/project-03.jpg" alt="Custom wooden wall shelving"><figcaption class="caption">Custom Woodwork</figcaption></figure>
+<figure class="gallery-item"><img src="images/project-04.jpg" alt="Geometric partition design"><figcaption class="caption">Feature Partition</figcaption></figure>
+<figure class="gallery-item"><img src="images/project-05.jpg" alt="Premium TV unit and pooja cabinet"><figcaption class="caption">TV Unit & Pooja</figcaption></figure>
+<figure class="gallery-item"><img src="images/project-06.jpg" alt="Premium wardrobe and display unit"><figcaption class="caption">Wardrobe & Display</figcaption></figure>
+<figure class="gallery-item"><img src="images/project-07.jpg" alt="Custom bedroom storage and study area"><figcaption class="caption">Bedroom Storage</figcaption></figure>
+<figure class="gallery-item"><img src="images/project-08.jpg" alt="Modern wall panelling"><figcaption class="caption">Wall Panelling</figcaption></figure>
+</div></div></section>
+
+<section class="process" id="process"><div class="container">
+<div class="section-head"><div class="kicker">Our approach</div><h2>From idea to finished space.</h2></div>
+<div class="process-grid">
+<div class="step"><b>01 · DISCOVER</b><h3>Understand</h3><p>We listen to your needs, taste, budget and the way you use your space.</p></div>
+<div class="step"><b>02 · DESIGN</b><h3>Visualize</h3><p>Concepts, layouts, materials and details come together into a clear direction.</p></div>
+<div class="step"><b>03 · CREATE</b><h3>Craft</h3><p>Our designs become reality through careful execution and attention to finish.</p></div>
+<div class="step"><b>04 · DELIVER</b><h3>Experience</h3><p>A finished space that feels considered, comfortable and uniquely yours.</p></div>
+</div></div></section>
+
+<section class="cta" id="contact"><div class="container">
+<div class="kicker">Let's create together</div><h2>Your space deserves a design goal.</h2><p>Tell us about your home or commercial project in Bengaluru.</p>
+<div class="actions" style="justify-content:center"><a class="btn primary" href="tel:+918197759714">Call 8197759714</a><a class="btn secondary" href="https://wa.me/918197759714?text=Hi%20Design%20Goals%20Interiors%2C%20I%27d%20like%20to%20discuss%20an%20interior%20project." target="_blank">Start on WhatsApp</a></div>
+<div class="contact-grid">
+<div class="contact-card"><small>Location</small><a href="#">Bengaluru, Karnataka</a></div>
+<div class="contact-card"><small>Instagram</small><a href="https://www.instagram.com/designgoalsinteriorss/" target="_blank">@designgoalsinteriorss</a></div>
+</div></div></section>
+
+<footer><div class="container footer-inner"><span>© 2026 Design Goals Interiors</span><span>Where creativity meets comfort.</span></div></footer>
+</body></html>
